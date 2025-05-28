@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roleta russa</title>
+</head>
+<body>
+  <div style="display: flex; justify-content: center; align-items: center; padding: 0; margin: 0;">
+    <button style="width: 150px; height: 100px;" id="roleta">
+      Roletar
+    </button>
+  </div>
+</body>
+</html> 
+
+<script>
+  const roleta = document.getElementById('roleta');
+  const bulletPosition = Math.floor(Math.random() * 6) + 1;
+
+  console.log('Posição da bala:', bulletPosition);
+
+  function roletar() {
+    const randomNumber = Math.floor(Math.random() * 6) + 1;
+    console.log('Número sorteado:', randomNumber);
+    if (randomNumber === bulletPosition) {
+      alert('Bang! Você perdeu!');
+    } else {
+      alert('Você sobreviveu! Próxima rodada.');
+    }
+  }
+
+  roleta.addEventListener('click', roletar);
+</script>
