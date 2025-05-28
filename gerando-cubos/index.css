@@ -1,0 +1,30 @@
+/* Estilos globais para o corpo da página */
+body {
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove preenchimento padrão */
+  font-family: Arial, sans-serif; /* Define família de fontes para todo o documento */
+}
+
+/* Estilos para o contêiner grid que vai conter todos os cubos */
+.grid {
+  display: flex; /* Define o layout como flexbox */
+  width: 100% !important; /* Força a largura a ocupar 100% do contêiner pai */
+  height: fit-content; /* Altura se ajusta ao conteúdo */
+  flex-direction: row !important; /* Força a direção do flexbox como linha (horizontal) */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha quando não couberem */
+  /* justify-content: space-evenly; */ /* Comentado: distribuiria os itens uniformemente */
+  /* align-items: center; */ /* Comentado: centralizaria verticalmente os itens */
+}
+
+/* Estilos para cada cubo individual */
+.cube {
+  width: 100px; /* Largura fixa de cada cubo */
+  height: 100px; /* Altura fixa de cada cubo */
+  margin: 10px; /* Espaçamento externo ao redor de cada cubo */
+  transition: transform 0.5s; /* Animação suave para transformações CSS (duração 0.5s) */
+  display: flex; /* Define o layout interno do cubo como flexbox */
+  justify-content: center; /* Centraliza horizontalmente o conteúdo do cubo */
+  align-items: center; /* Centraliza verticalmente o conteúdo do cubo */
+  color: white; /* Define a cor do texto dentro do cubo como branco */
+  font-weight: 600; /* Define o peso da fonte como semi-negrito */
+}
